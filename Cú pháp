@@ -1,0 +1,35 @@
+2 Cú pháp
+
+- selector {
+property: value;
+}
+- Trong đó:
+ + selector: được gọi là bộ chọn.
+ + property: được gọi là thuộc tính.
+ + value: được gọi là giá trị của thuộc tính.
+
+* Selectors (bộ chọn)
+
+- Bộ chọn CSS chọn (các) phần tử HTML mà bạn muốn tạo kiểu.
+- Ví dụ: các thẻ <h1>,<p>,... thì viết trong css sẽ chỉ lấy tên thẻ là h1, p.
++ Bộ chọn CSS được chia thành 5 loại:
+ - Simple selectors (bộ chọn đơn giản).
+ - Combinator selectors (bộ chọn tổng hợp).
+ - Pseudo-class selectors (bộ chọn lớp giả).
+ - Pseudo-elments selectors (bộ chọn phần tử giả).
+ - Attribute selectors (bộ chọn thuộc tính).
+
+ * Simple selectors (bộ chọn lớp giả)
+
+- Bộ chọn element(element selector): chọn các phần tử HTML dựa trên phần tử.
+- Bộ chọn id (id selector): sử dụng thuộc tính id (identifier- định danh) của 1 phần tử HTML để chọn 1 phần tử cụ thể. Lưu ý: tên id không được bắt đầu bằng số.
+ + #tile {} 
+
+- Bộ chọn class (class selector): chọn các thành phần HTML với 1 thuộc tính class cụ thể. Lưu ý: tên class không được bắt đầu bằng số.
+ + .title {}
+
+- Bộ chọn chung (universal selector): chọn tất cả các thành phần HTML trên trang.
+ + *{}
+
+- Bộ chọn theo nhóm (grouping selector): bộ chọn nhóm chon tất cả các element, id,class có cùng thuộc tính và giá trị thuộc tính.
+ + h1, h2, p {}
