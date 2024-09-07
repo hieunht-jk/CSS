@@ -1,0 +1,92 @@
+ Color (Màu sắc) và Backgrounds (Nền)
+
+1 Color (Màu sắc)
+- Cài phần mềm Just Color Picker để dễ dàng lấy mã màu chính xác.
+- Màu sắc trong CSS có thể được gán giá trị bằng các cách sau:
+ + Tên màu có sẵn: Sử dụng các tên màu mặc định như blue, black,... (ít sử dụng).
+ + HEX: Mã màu phổ biến nhất, sử dụng định dạng thập lục phân (HEX).
+ + RGB: Sử dụng giá trị màu theo mô hình RGB (ít sử dụng).
+ + HSL: Sử dụng giá trị màu theo mô hình HSL (rất ít sử dụng).
+
+- Ví dụ về mã màu HEX:
+ + Mã màu HEX được biểu diễn dưới dạng: #RRGGBB, trong đó:
+  + RR: Thành phần màu đỏ.
+  + GG: Thành phần màu xanh lá.
+  + BB: Thành phần màu xanh dương.
+
+- Cú pháp: #RRGGBB.
+ + Ví dụ:
+  + Màu đen: #000000
+  + Màu trắng: #FFFFFF
+  + Màu đỏ: #FF0000
+
+2 Backgrounds (Nền)
+- Background trong CSS dùng để thiết lập nền cho các phần tử HTML. Có thể là màu sắc, hình ảnh, hoặc gradient.
+- Các thuộc tính background cơ bản:
+
+2.1 background-color
+- Dùng để thiết lập màu nền cho phần tử.
+ + Ví dụ: background-color: #FF0000; (nền màu đỏ).
+
+2.2 background-clip
+- Xác định phạm vi được thiết lập màu nền cho phần tử (chỉ áp dụng cho nền là màu sắc).
+ + border-box: (Mặc định) Đổ màu từ content cho đến hết border.
+ + padding-box: Đổ màu từ content cho đến hết padding.
+ + content-box: Chỉ đổ màu phần tử content.
+
+2.3 background-image
+- Thiết lập nền là hình ảnh hoặc màu gradient.
+ + Ví dụ với hình ảnh:
+background-image: url("image.png");
+- Chèn nhiều hình ảnh:
+Hình ảnh đầu tiên nằm trên cùng.
+  + background-image: url("image1.png"), url("image2.png");
+- Sử dụng gradient:
+Tạo dải màu chuyển đổi giữa các màu.
+  + background-image: linear-gradient(180deg, #000000, #FFFFFF);
+- Kết hợp gradient và hình ảnh:
+  + background-image: linear-gradient(180deg, #000000, #FFFFFF), url("image.png");
+
+2.4 background-size
+- Quy định kích thước của nền.
++ Giá trị: Có thể sử dụng đơn vị như px, %, hoặc các từ khóa đặc biệt.
+ + Ví dụ:
+  + background-size: 100% auto;
++ contain: Điều chỉnh kích thước để hình ảnh nằm hoàn toàn trong khung phần tử, không bị vỡ.
+ + Ví dụ: background-size: contain;
++ cover: Kéo giãn hình ảnh để vừa với khung, cắt bỏ phần thừa nếu cần.
+ + Ví dụ: background-size: cover;
+
+2.5 background-repeat
+- Quy định xem nền có được lặp lại hay không.
+ + Ví dụ:
+  + background-repeat: no-repeat; (không lặp lại).
+  + background-repeat: repeat-x; (lặp lại theo chiều ngang).
+  + background-repeat: repeat-y; (lặp lại theo chiều dọc).
+
+2.6 background-position
+- Xác định vị trí của nền so với phần tử.
+ + Các giá trị:
+  + top left: Trên-trái.
+  + top right: Trên-phải.
+  + center: Giữa.
+  + bottom left: Dưới-trái.
+  + bottom right: Dưới-phải.
+- Ví dụ với tọa độ cụ thể:
+ + background-position: bottom 30px right 20px;
+
+2.7 background-attachment
+- Xác định nền có cuộn theo nội dung hay được cố định.
+ + Ví dụ:
+  + background-attachment: fixed;
+
+2.8 background-origin
+- Tương tự như background-clip, nhưng áp dụng cho nền là hình ảnh.
+ + Các giá trị:
+  + content-box: Nền chỉ chiếm phần content.
+  + padding-box: Nền chiếm phần content và padding.
+  + border-box: Nền chiếm phần content, padding, và border.
+
+2.9 Cách viết ngắn gọn của background
++ Ví dụ:
+ + background: #FFFFFF url("image.png") no-repeat top right;
