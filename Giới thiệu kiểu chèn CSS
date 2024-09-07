@@ -1,0 +1,29 @@
+Có ba kiểu chèn CSS
+
+1. Inline CSS (CSS nội tuyến)
+
+CSS được viết trực tiếp vào thuộc tính style của thẻ HTML mà bạn muốn chỉnh sửa.
+Thường được sử dụng để áp dụng một kiểu duy nhất cho một phần tử cụ thể.
+Ví dụ: <p style="color: red;">Đây là một đoạn văn.</p>.
+
+2. Internal CSS (CSS nội bộ)
+
+CSS được viết bên trong thẻ <style> và nằm trong phần <head> của file HTML.
+Thường được sử dụng khi chỉ có một trang HTML và bạn muốn áp dụng các quy tắc CSS cho tất cả các phần tử trên trang đó.
+Ví dụ:
+html
+Sao chép mã
+<style>
+  p {
+    color: blue;
+  }
+</style>
+3. External CSS (CSS bên ngoài)
+
+CSS được lưu trữ trong một tệp .css riêng biệt, và trang HTML liên kết đến tệp đó bằng thẻ <link> trong phần <head>.
+Rất tiện lợi để thay đổi giao diện của toàn bộ trang web bằng cách chỉnh sửa một tệp CSS duy nhất.
+Ví dụ:
+html
+Sao chép mã
+<link rel="stylesheet" href="mystyle.css">
+* Lưu ý: Nếu có xung đột giữa các kiểu CSS (tức là cùng một bộ chọn và thuộc tính nhưng giá trị khác nhau), trình duyệt sẽ áp dụng quy tắc từ bộ chọn được chèn cuối cùng.
