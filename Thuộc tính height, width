@@ -1,0 +1,18 @@
+Thuộc tính height, width
+
+- height: Xác định chiều cao của phần tử.
+- width: Xác định chiều rộng của phần tử.
+- min-height: Chiều cao tối thiểu của phần tử. Phần tử sẽ không thể nhỏ hơn giá trị này.
+- min-width: Chiều rộng tối thiểu của phần tử. Phần tử sẽ không thể nhỏ hơn giá trị này.
+- max-height: Chiều cao tối đa của phần tử. Phần tử sẽ không thể lớn hơn giá trị này.
+- max-width: Chiều rộng tối đa của phần tử. Phần tử sẽ không thể lớn hơn giá trị này.
+* Lưu ý:
+
+- Chiều cao (height) và chiều rộng (width) chỉ tính cho phần content của phần tử, không bao gồm phần padding, border, và margin.
+ + Ví dụ:
+div {
+  height: 200px;
+  width: 300px;
+  min-height: 100px;
+  max-width: 500px;
+}
