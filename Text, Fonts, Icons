@@ -1,0 +1,52 @@
+Text, Fonts, Icons
+
+1 Text
+
+- Text Color: Thuộc tính color được sử dụng để đặt màu sắc cho văn bản.
+ + Ví dụ: color: green;
+
+-Text Align: Thuộc tính text-align dùng để thiết lập căn lề ngang cho văn bản.
+ + Ví dụ:
+  + text-align: center; — Căn giữa.
+  + text-align: left; — Căn trái.
+  + text-align: right; — Căn phải.
+  + text-align: justify; — Căn đều hai bên.
+
+- Text Transform: Thuộc tính text-transform sử dụng để chỉ định việc chuyển đổi chữ hoa và chữ thường trong văn bản.
+ + Ví dụ:
+  + text-transform: uppercase; — Viết chữ hoa.
+  + text-transform: lowercase; — Viết chữ thường.
+  + text-transform: capitalize; — Viết hoa chữ cái đầu.
+
+2 Fonts
+- Trong CSS có năm họ phông chữ chính:
+ + Serif: Phông chữ có chân, với nét nhỏ ở các cạnh của mỗi chữ cái.
+ + Sans-serif: Phông chữ không chân, có đường nét rõ ràng và không có nét kẻ đi kèm.
+ + Monospace: Phông chữ đơn cách, tất cả các ký tự có cùng chiều rộng cố định.
+ + Cursive: Phông chữ mô phỏng chữ viết tay của con người.
+ + Fantasy: Phông chữ trang trí, mang phong cách vui tươi, sáng tạo.
+
+- Trang web Google Fonts: Google Fonts
+ + Thuộc tính font-family: Được sử dụng để chỉ định họ phông chữ cho văn bản.
+ + Ví dụ: font-family: "Roboto", sans-serif
+
+- Thuộc tính font-style: Được sử dụng để chỉ định kiểu chữ nghiêng.
+ + Có 3 giá trị:
+  + normal: Mặc định.
+  + italic: Văn bản được hiển thị in nghiêng.
+  + oblique: Văn bản nghiêng (khác một chút so với italic, ít phổ biến hơn).
+
+- Thuộc tính font-weight: Được sử dụng để chỉ định độ dày của phông chữ.
+ + Giá trị có thể là: normal, bold, hoặc các giá trị số từ 100 đến 900.
+  + Ví dụ:
+   + font-weight: 700;
+   + font-weight: bold;
+   + font-weight: normal;
+ - Thuộc tính font-size: Được sử dụng để đặt kích thước văn bản.
+  + Ví dụ: font-size: 12px;
+
+3 Icons
+- Link website: FontAwesome
+- Link CDN: CDN for FontAwesome
+ + Cách sử dụng:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
