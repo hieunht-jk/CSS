@@ -1,35 +1,70 @@
-2 Cú pháp
+Cú pháp CSS
 
-- selector {
-property: value;
+- Cú pháp cơ bản của CSS
+selector {
+  property: value;
 }
-- Trong đó:
- + selector: được gọi là bộ chọn.
- + property: được gọi là thuộc tính.
- + value: được gọi là giá trị của thuộc tính.
+- Trong đó:
+ + selector: Được gọi là bộ chọn, dùng để chọn phần tử HTML cần áp dụng kiểu.
+ + property: Thuộc tính, mô tả kiểu định dạng cần thay đổi (ví dụ: color, font-size).
+ + value: Giá trị của thuộc tính (ví dụ: red, 16px).
 
-* Selectors (bộ chọn)
+Selectors (Bộ chọn)
+- Bộ chọn CSS chọn các phần tử HTML mà bạn muốn áp dụng kiểu.
+ + Ví dụ: Các thẻ <h1>, <p>,... khi được sử dụng trong CSS sẽ chỉ lấy tên thẻ như h1, p.
 
-- Bộ chọn CSS chọn (các) phần tử HTML mà bạn muốn tạo kiểu.
-- Ví dụ: các thẻ <h1>,<p>,... thì viết trong css sẽ chỉ lấy tên thẻ là h1, p.
-+ Bộ chọn CSS được chia thành 5 loại:
- - Simple selectors (bộ chọn đơn giản).
- - Combinator selectors (bộ chọn tổng hợp).
- - Pseudo-class selectors (bộ chọn lớp giả).
- - Pseudo-elments selectors (bộ chọn phần tử giả).
- - Attribute selectors (bộ chọn thuộc tính).
+- Các loại bộ chọn CSS:
 
- * Simple selectors (bộ chọn lớp giả)
+ + Simple selectors (Bộ chọn đơn giản)
+Chọn các phần tử dựa trên tên thẻ, class, hoặc id.
 
-- Bộ chọn element(element selector): chọn các phần tử HTML dựa trên phần tử.
-- Bộ chọn id (id selector): sử dụng thuộc tính id (identifier- định danh) của 1 phần tử HTML để chọn 1 phần tử cụ thể. Lưu ý: tên id không được bắt đầu bằng số.
- + #tile {} 
+ + Combinator selectors (Bộ chọn kết hợp)
+Chọn các phần tử dựa trên mối quan hệ giữa chúng.
 
-- Bộ chọn class (class selector): chọn các thành phần HTML với 1 thuộc tính class cụ thể. Lưu ý: tên class không được bắt đầu bằng số.
- + .title {}
+ + Pseudo-class selectors (Bộ chọn lớp giả)
+Chọn các trạng thái đặc biệt của phần tử như khi phần tử được hover hoặc active.
 
-- Bộ chọn chung (universal selector): chọn tất cả các thành phần HTML trên trang.
- + *{}
+ + Pseudo-element selectors (Bộ chọn phần tử giả)
+Chọn và tạo kiểu cho một phần cụ thể của phần tử, chẳng hạn như chữ cái đầu tiên hoặc dòng đầu tiên.
 
-- Bộ chọn theo nhóm (grouping selector): bộ chọn nhóm chon tất cả các element, id,class có cùng thuộc tính và giá trị thuộc tính.
- + h1, h2, p {}
+ + Attribute selectors (Bộ chọn thuộc tính)
+Chọn các phần tử dựa trên các thuộc tính của chúng.
+
+* Simple selectors (Bộ chọn đơn giản)
+
+- Bộ chọn phần tử (element selector):
+Chọn các phần tử HTML dựa trên tên thẻ.
+ + Ví dụ:
+p {
+  color: blue;
+}
+
+- Bộ chọn id (id selector):
+Chọn một phần tử HTML cụ thể dựa trên thuộc tính id.
+Lưu ý: Tên id không được bắt đầu bằng số.
+ + Ví dụ:
+#title {
+  font-size: 24px;
+}
+
+- Bộ chọn class (class selector):
+Chọn các phần tử HTML dựa trên thuộc tính class.
++ Lưu ý: Tên class không được bắt đầu bằng số.
+ + Ví dụ:
+.title {
+  color: green;
+}
+- Bộ chọn chung (universal selector):
+Chọn tất cả các phần tử HTML trên trang.
+ + Ví dụ:
+* {
+  margin: 0;
+  padding: 0;
+}
+
+- Bộ chọn nhóm (grouping selector):
+Chọn nhiều phần tử, id, hoặc class cùng một lúc và áp dụng chung một kiểu.
+ + Ví dụ:
+h1, h2, p {
+  color: red;
+}
