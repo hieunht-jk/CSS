@@ -1,0 +1,47 @@
+Box Model, Borders, Padding, Margins
+
+1 Box Model (Mô hình hộp)
+- Tất cả các phần tử trong HTML có thể được coi là các hộp (box).
+- Mô hình hộp bao gồm các phần:
+ + Margin (Lề): Tạo khoảng cách cho vùng bên ngoài của border (đường viền). Lề là trong suốt và không ảnh hưởng đến màu sắc hay nền.
+ + Border (Đường viền): Bao quanh padding và nội dung, tạo khung cho phần tử.
+ + Padding (Phần đệm): Tạo khoảng trống giữa nội dung và border, padding cũng trong suốt.
+ + Content (Nội dung): Đây là nơi chứa văn bản, hình ảnh, và các nội dung khác của phần tử.
+-Trong Dev Tools của trình duyệt, bạn có thể vào tab Computed để xem mô hình hộp của một phần tử cụ thể.
+
+2 Border (Đường viền)
+- Border bao quanh padding và nội dung của một phần tử, tạo khung viền xung quanh phần tử đó.
+- Thuộc tính chính: border-style
+- Các kiểu đường viền phổ biến:
+ + dotted: Đường viền chấm.
+ + dashed: Đường viền nét đứt.
+ + solid: Đường viền liền mạch.
+ + none: Không có đường viền.
+
+* Các kiểu ít phổ biến hơn:
+ + double: Đường viền kép.
+ + groove: Đường viền có rãnh, tạo cảm giác 3D.
+ + ridge: Đường viền có gờ nổi, tạo cảm giác 3D.
+ + inset: Đường viền 3D chìm vào trong.
+ + outset: Đường viền 3D nổi lên trên.
+ + hidden: Đường viền bị ẩn (không hiển thị).
+- Ví dụ:
+p {
+  border: 5px solid red;
+}
+
+3 Padding (Phần đệm)
+- Padding tạo khoảng trống giữa nội dung của phần tử và đường viền (border).
+- Các giá trị của padding có thể được thiết lập cho từng phía: padding-top, padding-right, padding-bottom, và padding-left.
+ + Ví dụ:
+div {
+  padding: 10px;
+}
+
+4 Margin (Lề)
+- Margin tạo khoảng cách giữa phần tử hiện tại và các phần tử khác xung quanh. Nó nằm bên ngoài đường viền (border).
+- Các giá trị của margin có thể được thiết lập cho từng phía: margin-top, margin-right, margin-bottom, và margin-left.
+ + Ví dụ:
+div {
+  margin: 20px;
+}
