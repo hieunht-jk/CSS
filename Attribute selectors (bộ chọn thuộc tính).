@@ -1,0 +1,108 @@
+* Attribute Selectors là các bộ chọn trong CSS được sử dụng để chọn các phần tử HTML dựa trên thuộc tính cụ thể của chúng.
+
+ + [attribute] – Chọn phần tử có thuộc tính.
+ + [attribute="value"] – Chọn phần tử có thuộc tính với giá trị chính xác.
+ + [attribute~="value"] – Chọn phần tử có thuộc tính chứa từ value.
+ + [attribute|="value"] – Chọn phần tử có thuộc tính bắt đầu bằng value hoặc theo sau bởi dấu gạch ngang.
+ + [attribute^="value"] – Chọn phần tử có thuộc tính bắt đầu bằng value.
+ + [attribute$="value"] – Chọn phần tử có thuộc tính kết thúc bằng value.
+ + [attribute="value"]* – Chọn phần tử có thuộc tính chứa value ở bất kỳ đâu trong chuỗi.
+
+1. [attribute]
+- Chọn tất cả các phần tử có thuộc tính được chỉ định, bất kể giá trị của thuộc tính đó.
+ + Ví dụ:
+- HTML:
+<style>
+  [type] {
+    background-color: yellow;
+  }
+</style>
+
+<input type="text" value="Text input">
+<input type="radio" name="option">
+- Trong ví dụ này, tất cả các phần tử có thuộc tính type (như <input>) sẽ có nền màu vàng.
+
+2. [attribute="value"]
+- Chọn các phần tử có thuộc tính với giá trị chính xác là value.
+ + Ví dụ:
+- HTML:
+<style>
+  [type="text"] {
+    background-color: lightblue;
+  }
+</style>
+
+<input type="text" value="Text input">
+<input type="radio" name="option">
+- Chỉ phần tử <input> có type="text" sẽ có nền màu xanh nhạt.
+
+3. [attribute~="value"]
+- Chọn các phần tử có thuộc tính chứa từ value trong danh sách các giá trị, được phân tách bởi khoảng trắng.
+ + Ví dụ:
+- HTML:
+<style>
+  [class~="highlight"] {
+    border: 2px solid red;
+  }
+</style>
+
+<div class="box highlight">Highlighted box</div>
+<div class="box">Normal box</div>
+- Phần tử với class="box highlight" sẽ có viền đỏ, vì nó chứa từ "highlight" trong giá trị của thuộc tính class.
+
+4. [attribute|="value"]
+- Chọn các phần tử có giá trị thuộc tính bắt đầu bằng value, và có thể theo sau bởi dấu gạch ngang (-).
+ + Ví dụ:
+- HTML:
+<style>
+  [lang|="en"] {
+    color: green;
+  }
+</style>
+
+<p lang="en">This is English text.</p>
+<p lang="en-US">This is US English text.</p>
+<p lang="fr">This is French text.</p>
+- Cả hai phần tử có lang="en" và lang="en-US" sẽ có màu xanh, vì giá trị thuộc tính lang bắt đầu bằng "en".
+
+5. [attribute^="value"]
+- Chọn các phần tử có giá trị thuộc tính bắt đầu bằng value (không cần dấu gạch nối).
+ + Ví dụ:
+- HTML:
+<style>
+  [href^="https"] {
+    color: blue;
+  }
+</style>
+
+<a href="https://example.com">Secure link</a>
+<a href="http://example.com">Non-secure link</a>
+- Chỉ liên kết với thuộc tính href bắt đầu bằng "https" sẽ có màu xanh.
+
+6. [attribute$="value"]
+- Chọn các phần tử có giá trị thuộc tính kết thúc bằng value.
+ + Ví dụ:
+-HTML:
+<style>
+  [src$=".png"] {
+    border: 2px solid black;
+  }
+</style>
+
+<img src="image.png" alt="Image">
+<img src="photo.jpg" alt="Photo">
+- Chỉ hình ảnh có thuộc tính src kết thúc bằng ".png" sẽ có viền màu đen.
+
+7. [attribute*="value"]
+- Chọn các phần tử có giá trị thuộc tính chứa value ở bất kỳ vị trí nào.
+ + Ví dụ:
+- HTML:
+<style>
+  [href*="example"] {
+    font-weight: bold;
+  }
+</style>
+
+<a href="https://example.com">Example link</a>
+<a href="https://test.com">Test link</a>
+- Liên kết có href chứa từ "example" sẽ được in đậm.
