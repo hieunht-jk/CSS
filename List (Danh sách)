@@ -1,0 +1,14 @@
+List (Danh sách)
+
++ list-style-type: Chỉ định kiểu đánh dấu danh sách.
++ list-style-type: disc; - Dấu chấm tròn, mặc định.
++ list-style-type: circle; - Hình tròn rỗng bên trong.
++ list-style-type: square; - Hình vuông.
++ list-style-type: disclosure-closed; - Hình tam giác chỉ sang phải.
++ list-style-type: none; - Không hiển thị dấu.
++ list-style-type: upper-roman; - Số La Mã viết hoa.
++ list-style-type: lower-alpha; - Chữ cái viết thường.
++ list-style-position: Chỉ định vị trí của điểm đánh dấu mục danh sách.
++ list-style-position: outside; - Điểm đánh dấu nằm bên ngoài nội dung mục.
++ list-style-position: inside; - Điểm đánh dấu nằm bên trong nội dung mục.
+* Link tham khảo: MDN Web Docs về list-style-type
