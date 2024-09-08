@@ -1,0 +1,68 @@
+z-index
+
+- Thuộc tính z-index: Xác định thứ tự xếp chồng của các phần tử với thuộc tính position khác ngoài static. Phần tử có giá trị z-index cao hơn sẽ nằm trên phần tử có giá trị thấp hơn.
+- Giá trị mặc định là 0.
+- Phần tử có giá trị z-index càng cao sẽ nằm trên phần tử có giá trị thấp hơn.
+* Chú ý: z-index chỉ hoạt động khi thuộc tính position của phần tử có giá trị là absolute, fixed, relative, hoặc sticky. Không áp dụng cho phần tử có position: static.
+- Ví dụ
+ + Dưới đây là ví dụ minh họa về cách sử dụng thuộc tính z-index:
+
+- HTML
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Z-Index</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: lightblue;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .box2 {
+            background-color: lightcoral;
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+        }
+
+        .box3 {
+            background-color: lightgreen;
+            top: 110px;
+            left: 110px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+
+</body>
+</html>
+
+- Giải thích:
+ + .box1: Phần tử với z-index: 1, nằm ở dưới cùng so với .box2 và trên .box3.
+ + .box2: Phần tử với z-index: 2, nằm trên .box1 và .box3 do giá trị z-index cao hơn.
+ + .box3: Phần tử với z-index: 0, nằm dưới .box1 và .box2 vì giá trị z-index thấp hơn.
+- Các phần tử .box được đặt chồng lên nhau trong phần tử bao bọc .container. Bạn có thể sao chép mã này và thử nghiệm trong trình duyệt để quan sát hiệu ứng của thuộc tính z-index.
