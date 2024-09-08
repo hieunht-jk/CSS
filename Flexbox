@@ -1,0 +1,44 @@
+Flexbox
+- Flexbox Layout là một kiểu bố cục trang giúp tối ưu hóa việc phân phối không gian và căn chỉnh các phần tử trong container, đặc biệt là khi kích thước của chúng không ổn định hoặc chưa biết trước. Flexbox giúp:
+ + Tự cân đối kích thước: Các phần tử bên trong container có thể tự động thay đổi kích thước để phù hợp với không gian có sẵn.
+ + Thay đổi chiều rộng/cao: Các phần tử có thể linh hoạt thay đổi chiều rộng hoặc chiều cao của chúng để phù hợp với không gian trong container.
+ + Thay đổi thứ tự phần tử: Các phần tử có thể được sắp xếp lại một cách linh hoạt mà không cần thay đổi thứ tự trong mã HTML.
+
+- Thành phần của Flexbox:
+ + Container: Phần tử cha sử dụng thuộc tính display: flex hoặc display: inline-flex để trở thành flex container.
+ + Item: Các phần tử con bên trong flex container được gọi là flex items.
++ Ví dụ:
+- HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-between; /* Căn chỉnh phần tử theo chiều ngang */
+            align-items: center; /* Căn chỉnh phần tử theo chiều dọc */
+            height: 100px;
+            background-color: lightgrey;
+        }
+        .flex-item {
+            background-color: coral;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
+- Trong ví dụ trên:
+ + .flex-container là flex container với các thuộc tính để căn chỉnh các phần tử bên trong.
+ + .flex-item là các phần tử bên trong flex container được căn chỉnh theo các quy tắc của Flexbox.
