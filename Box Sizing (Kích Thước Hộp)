@@ -1,0 +1,38 @@
+Box Sizing (Kích Thước Hộp)
+- Trong CSS, thuộc tính box-sizing xác định cách tính kích thước của các phần tử HTML (bao gồm content, padding, và border) khi chúng ta đặt giá trị cho width và height.
+- Mặc định:
+ + Khi sử dụng thuộc tính width và height, nó chỉ áp dụng cho phần nội dung (content) của phần tử, không bao gồm phần padding và border.
+* Có hai loại box-sizing:
+
+- content-box (Mặc định):
+ + Đây là giá trị mặc định của box-sizing.
+ + Khi sử dụng width và height, kích thước được áp dụng chỉ cho phần nội dung của phần tử, không tính phần padding và border.
+- CSS:
+div {
+  box-sizing: content-box; /* Mặc định */
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+- Kết quả:
+ + Chiều rộng thực tế của phần tử sẽ là:
+200px (content) + 20px (padding trái) + 20px (padding phải) + 5px (border trái) + 5px (border phải) = 250px
+
+- border-box:
+ + Khi sử dụng border-box, giá trị width và height của phần tử sẽ bao gồm cả content, padding, và border. Điều này có nghĩa là kích thước thực tế của phần tử sẽ không vượt quá giá trị được khai báo cho width và height.
+- CSS:
+div {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+- Kết quả:
++ Chiều rộng thực tế của phần tử vẫn sẽ là 200px, nhưng phần nội dung sẽ được tính toán như sau:
+- CSS:
+Nội dung = 200px (width) - 20px (padding trái) - 20px (padding phải) - 5px (border trái) - 5px (border phải) = 150px
+
+- Tóm tắt:
+ + content-box (Mặc định): width và height chỉ bao gồm phần nội dung.
+ + border-box: width và height bao gồm cả nội dung, padding, và border.
+- Sử dụng border-box giúp dễ dàng kiểm soát kích thước thực tế của phần tử, đặc biệt khi thêm padding và border.
