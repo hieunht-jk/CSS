@@ -1,0 +1,70 @@
+Display (Hiển thị)
+
+ + display: inline; - Phần tử không chiếm cả hàng, không thể đặt chiều rộng, chiều cao, margin trên/dưới, và padding trên/dưới.
+ + display: block; - Phần tử chiếm toàn bộ chiều rộng của dòng (kéo từ trái sang phải), bắt đầu ở một hàng mới. Có thể đặt chiều rộng, chiều cao, margin, và padding.
+ + display: inline-block; - Phần tử không bắt đầu ở hàng mới, nhưng có thể đặt chiều rộng, chiều cao, margin và padding. Chiều rộng mặc định bằng nội dung của phần tử.
+ + display: none; - Ẩn phần tử hoàn toàn khỏi giao diện, không chiếm không gian.
+ + visibility: hidden; - Phần tử bị ẩn nhưng vẫn chiếm không gian trên giao diện.
+ + visibility: visible; - Hiển thị phần tử (trạng thái hiển thị mặc định).
+
+- ví dụ
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Display và Visibility</title>
+    <style>
+        .inline {
+            display: inline;
+            background-color: lightblue;
+        }
+
+        .block {
+            display: block;
+            background-color: lightgreen;
+            margin-bottom: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background-color: lightcoral;
+            margin-right: 10px;
+        }
+
+        .none {
+            display: none;
+            background-color: lightyellow;
+        }
+
+        .hidden {
+            visibility: hidden;
+            background-color: lightpink;
+            margin-bottom: 10px;
+        }
+
+        .visible {
+            visibility: visible;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ví dụ về Display và Visibility</h2>
+
+    <div class="inline">Inline Element</div>
+    <div class="block">Block Element</div>
+    <div class="inline-block">Inline-Block Element</div>
+    <div class="inline-block">Another Inline-Block Element</div>
+    <div class="none">This element is hidden using display: none;</div>
+    <div class="hidden">This element is hidden using visibility: hidden;</div>
+    <div class="visible">This element is visible</div>
+
+</body>
+</html>
+
+- Phần này giúp hiểu rõ cách các thuộc tính display và visibility hoạt động khi thay đổi cách hiển thị các phần tử HTML trên trang web.
