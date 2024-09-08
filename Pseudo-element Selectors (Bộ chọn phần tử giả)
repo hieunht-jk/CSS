@@ -1,0 +1,58 @@
+Pseudo-element Selectors (Bộ chọn phần tử giả)
+
+- Pseudo-element selectors được sử dụng để tạo ra các phần tử giả và áp dụng kiểu dáng (style) cho chúng mà không cần tạo phần tử thực sự trong HTML.
+ + Cú pháp:
+- CSS:
+selector::pseudo-element {
+    property: value;
+}
+
+* Danh sách pseudo-element:
+
+- ::before: Chèn nội dung trước nội dung của mỗi phần tử. (Phải thêm content: ""; để tạo nội dung giả).
+- CSS: 
+.example::before {
+    content: "→ ";
+    color: red;
+}
++ Ví dụ: Thêm mũi tên màu đỏ trước mỗi phần tử có lớp example.
+
+- ::after: Chèn nội dung sau nội dung của mỗi phần tử. (Phải thêm content: ""; để tạo nội dung giả).
+- CSS:
+.example::after {
+    content: " ←";
+    color: blue;
+}
++ Ví dụ: Thêm mũi tên màu xanh sau mỗi phần tử có lớp example.
+
+- ::first-letter: Chọn chữ cái đầu tiên của mỗi phần tử.
+- CSS:
+p::first-letter {
+    font-size: 2em;
+    color: green;
+}
++ Ví dụ: Chữ cái đầu tiên của mỗi đoạn văn sẽ lớn hơn và có màu xanh lá cây.
+
+- ::first-line: Chọn dòng đầu tiên của mỗi phần tử.
+- CSS:
+p::first-line {
+    font-weight: bold;
+    color: orange;
+}
++ Ví dụ: Dòng đầu tiên của mỗi đoạn văn sẽ được in đậm và có màu cam.
+
+- ::marker: Chọn các điểm đánh dấu của các mục danh sách (<ul> và <ol>).
+- CSS:
+ul::marker {
+    color: purple;
+    font-size: 1.5em;
+}
++ Ví dụ: Các điểm đánh dấu của danh sách không sắp xếp sẽ có màu tím và kích thước lớn hơn.
+
+- ::selection: Dùng để style cho vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen"). Các thuộc tính CSS có sẵn với ::selection bao gồm color, background, cursor, và outline.
+- CSS:
+::selection {
+    background: yellow;
+    color: black;
+}
++ Ví dụ: Vùng văn bản được chọn sẽ có nền màu vàng và chữ màu đen.
