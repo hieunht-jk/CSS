@@ -1,0 +1,46 @@
+Math Functions (Hàm toán học)
+- Các hàm toán học trong CSS cho phép thực hiện các phép tính toán học trực tiếp trong mã CSS để đưa ra giá trị thuộc tính linh hoạt, thích ứng với nhiều điều kiện khác nhau. 
+
+* Hàm calc()
+- Chức năng: Hàm calc() thực hiện phép tính toán học và trả về giá trị tính được làm giá trị cho thuộc tính CSS. Các phép toán có thể sử dụng bao gồm cộng (+), trừ (-), nhân (*), và chia (/).
+ + Cú pháp:
+- CSS:
+calc(expression);
+- Trong đó expression là biểu thức toán học mà bạn muốn tính.
+  + Ví dụ:
+- CSS:
+div {
+  width: calc(100% - 50px);
+}
+- Ở ví dụ trên, width của phần tử div sẽ được tính bằng 100% chiều rộng của phần tử cha trừ đi 50px.
+
+* Hàm max()
+- Chức năng: Hàm max() chọn giá trị lớn nhất từ danh sách các giá trị và sử dụng giá trị đó làm giá trị thuộc tính CSS.
+ + Cú pháp:
+- CSS:
+max(value1, value2, ...);
+- Các giá trị value1, value2,... có thể là số nguyên, giá trị phần trăm, hoặc các đơn vị đo CSS khác.
+ + Ví dụ:
+- CSS:
+div {
+  width: max(50%, 300px);
+}
+- Ở ví dụ trên, nếu 50% chiều rộng của phần tử cha lớn hơn 300px, width sẽ là 50%. Nếu không, width sẽ là 300px.
+
+* Hàm min()
+- Chức năng: Hàm min() chọn giá trị nhỏ nhất từ danh sách các giá trị và sử dụng giá trị đó làm giá trị thuộc tính CSS.
+ + Cú pháp:
+- CSS:
+min(value1, value2, ...);
+- Các giá trị value1, value2,... có thể là số nguyên, giá trị phần trăm, hoặc các đơn vị đo CSS khác.
+ + Ví dụ:
+- CSS:
+div {
+  width: min(50%, 300px);
+}
+- Trong ví dụ trên, nếu 50% chiều rộng của phần tử cha nhỏ hơn 300px, width sẽ là 50%. Nếu không, width sẽ là 300px.
+
+- Tóm tắt:
+ + calc(): Thực hiện phép toán và trả về kết quả làm giá trị thuộc tính CSS.
+ + max(): Chọn giá trị lớn nhất từ danh sách giá trị làm giá trị thuộc tính.
+ + min(): Chọn giá trị nhỏ nhất từ danh sách giá trị làm giá trị thuộc tính.
