@@ -25,7 +25,8 @@ Box Model, Borders, Padding, Margins
  + inset: Đường viền 3D chìm vào trong.
  + outset: Đường viền 3D nổi lên trên.
  + hidden: Đường viền bị ẩn (không hiển thị).
-- Ví dụ:
+  + Ví dụ:
+- CSS:
 p {
   border: 5px solid red;
 }
@@ -34,6 +35,7 @@ p {
 - Padding tạo khoảng trống giữa nội dung của phần tử và đường viền (border).
 - Các giá trị của padding có thể được thiết lập cho từng phía: padding-top, padding-right, padding-bottom, và padding-left.
  + Ví dụ:
+- CSS:
 div {
   padding: 10px;
 }
@@ -42,6 +44,7 @@ div {
 - Margin tạo khoảng cách giữa phần tử hiện tại và các phần tử khác xung quanh. Nó nằm bên ngoài đường viền (border).
 - Các giá trị của margin có thể được thiết lập cho từng phía: margin-top, margin-right, margin-bottom, và margin-left.
  + Ví dụ:
+- CSS:
 div {
   margin: 20px;
 }
