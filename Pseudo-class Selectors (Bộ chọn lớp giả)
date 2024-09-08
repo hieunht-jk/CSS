@@ -1,0 +1,83 @@
+Pseudo-class Selectors (Bộ chọn lớp giả)
+
+- Pseudo-class selectors được sử dụng để định dạng các phần tử ở trạng thái đặc biệt hoặc theo vị trí của chúng trong DOM.
+
+ + Cú pháp:
+- CSS:
+selector:pseudo-class {
+    property: value;
+}
+
+* Một số pseudo-class phổ biến:
+
+- :link: Áp dụng cho liên kết chưa được truy cập lần nào (chỉ sử dụng cho thẻ <a>).
+- CSS:
+a:link {
+    color: blue;
+}
++ Ví dụ: Tất cả các liên kết chưa được truy cập sẽ có màu xanh.
+
+- :visited: Áp dụng cho liên kết đã được truy cập (chỉ sử dụng cho thẻ <a>).
+- CSS:
+a:visited {
+    color: purple;
+}
++ Ví dụ: Tất cả các liên kết đã được truy cập sẽ có màu tím.
+
+- :hover: Áp dụng khi di chuyển chuột lên phần tử.
+- CSS:
+a:hover {
+    color: red;
+}
++ Ví dụ: Khi di chuột lên liên kết, màu sắc của liên kết sẽ chuyển thành đỏ.
+
+- :first-child: Áp dụng cho phần tử đầu tiên của loại con trực tiếp của phần tử bao bọc.
+- CSS:
+p:first-child {
+    font-weight: bold;
+}
++ Ví dụ: Đoạn văn đầu tiên của mỗi phần tử bao bọc sẽ được in đậm.
+
+- :first-child: Áp dụng cho phần tử đầu tiên của loại con trực tiếp của phần tử bao bọc.
+- CSS:
+p:first-child {
+    font-weight: bold;
+}
++ Ví dụ: Đoạn văn đầu tiên của mỗi phần tử bao bọc sẽ được in đậm.
+
+- :active: Áp dụng khi phần tử đang được nhấp vào.
+- CSS:
+a:active {
+    color: green;
+}
++ Ví dụ: Khi nhấp vào liên kết, màu sắc của liên kết sẽ chuyển thành xanh lục.
+
+- :last-child: Áp dụng cho phần tử cuối cùng của loại con trực tiếp của phần tử bao bọc.
+- CSS:
+p:last-child {
+    font-style: italic;
+}
++ Ví dụ: Đoạn văn cuối cùng của mỗi phần tử bao bọc sẽ có kiểu chữ nghiêng.
+
+- :nth-child(n): Áp dụng cho phần tử con dựa trên chỉ số của nó.
+ + n có thể là:
+  * even: Chọn các phần tử có chỉ số chẵn.
+- CSS:
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
++ Ví dụ: Các hàng chẵn trong bảng sẽ có màu nền xám nhạt.
+ 
+  * odd: Chọn các phần tử có chỉ số lẻ.
+- CSS:
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
++ Ví dụ: Các hàng lẻ trong bảng sẽ có màu nền trắng.
+
+- Số hoặc biểu thức an+b: Chọn các phần tử dựa trên chỉ số cụ thể hoặc theo công thức.
+- CSS:
+li:nth-child(3n) {
+    color: orange;
+}
++ Ví dụ: Chọn tất cả các phần tử <li> có chỉ số là bội số của 3 và thay đổi màu chữ thành cam.
