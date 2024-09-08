@@ -1,0 +1,71 @@
+Opacity (Độ mờ)
+
+- Thuộc tính opacity: Chỉ định mức độ mờ hoặc độ trong suốt của một phần tử.
+
+- Giá trị:
++ opacity nhận giá trị từ 0 đến 1.
++ 0 tương đương với hoàn toàn trong suốt (không nhìn thấy).
++ 1 tương đương với hoàn toàn không mờ (hoàn toàn nhìn thấy).
++ Các giá trị giữa 0 và 1 tạo ra mức độ mờ khác nhau.
+
+ + Cú pháp:
+- CSS:
+selector {
+    opacity: value;
+}
+ + Ví dụ:
+- CSS:
+.faded {
+    opacity: 0.6;
+}
+- Giải thích: Phần tử với lớp faded sẽ có độ mờ 60%, nghĩa là nó sẽ mờ đi 40%.
+
+ + Ví dụ thực tế:
+- HTML:
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Opacity</title>
+    <style>
+        .opaque {
+            opacity: 1;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .semi-transparent {
+            opacity: 0.5;
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .transparent {
+            opacity: 0;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="opaque">Hoàn toàn không mờ (Opacity: 1)</div>
+    <div class="semi-transparent">Nửa mờ (Opacity: 0.5)</div>
+    <div class="transparent">Hoàn toàn mờ (Opacity: 0)</div>
+</body>
+</html>
+
+ + opaque: Phần tử này hoàn toàn nhìn thấy với độ mờ là 0% (opacity: 1).
+ + semi-transparent: Phần tử này mờ đi 50% với độ mờ là 50% (opacity: 0.5).
+ + transparent: Phần tử này hoàn toàn trong suốt với độ mờ là 100% (opacity: 0).
+- Sử dụng thuộc tính opacity giúp bạn điều chỉnh mức độ hiển thị của phần tử, cho phép tạo ra các hiệu ứng mờ ảo hoặc trong suốt một cách dễ dàng.
+
+
+
+
+
+
+
