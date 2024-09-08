@@ -1,0 +1,88 @@
+Combinator Selectors (Bộ chọn tổ hợp)
+
+* Adjacent Sibling Selectors (Bộ chọn anh chị em liền kề)
+
+- Chức năng: Chọn phần tử tag02 nằm ngay sau phần tử tag01, cùng cấp.
+ + Cú pháp:
+tag01 + tag02 {
+    /* viết CSS trong này */
+}
+ + Ví dụ: Chọn phần tử <p> ngay sau <h1>:
+- HTML:
+<h1>Tiêu đề</h1>
+<p>Đoạn văn liền kề</p>
+<p>Đoạn văn không liền kề</p>
+
+- CSS:
+h1 + p {
+    color: red;
+}
+- Trong ví dụ này, chỉ đoạn văn ngay sau tiêu đề sẽ có màu đỏ.
+
+* General Sibling Selectors (Bộ chọn chị em chung)
+
+- Chức năng: Chọn tất cả các phần tử tag02 nằm sau phần tử tag01, cùng cấp.
+ + Cú pháp:
+- CSS:
+tag01 ~ tag02 {
+    /* viết CSS trong này */
+}
+ + Ví dụ: Chọn tất cả các đoạn văn sau <h1>:
+- HTML:
+<h1>Tiêu đề</h1>
+<p>Đoạn văn 1</p>
+<p>Đoạn văn 2</p>
+<div>Phần tử khác</div>
+<p>Đoạn văn 3</p>
+
+- CSS:
+h1 ~ p {
+    color: blue;
+}
+- Trong ví dụ này, tất cả các đoạn văn sau tiêu đề đều có màu xanh.
+
+* Child Selectors (Bộ chọn con)
+
+- Chức năng: Chọn tất cả các phần tử tag02 là con trực tiếp (cấp 1) của phần tử tag01.
+ + Cú pháp:
+- CSS:
+tag01 > tag02 {
+    /* viết CSS trong này */
+}
+ + Ví dụ: Chọn các phần tử <li> là con trực tiếp của <ul>:
+- HTML:
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <ul>
+        <li>Item 3</li>
+    </ul>
+</ul>
+
+- CSS:
+ul > li {
+    color: green;
+}
+- Trong ví dụ này, chỉ các mục danh sách trực tiếp trong <ul> sẽ có màu xanh.
+
+* Descendant Selectors (Bộ chọn hậu duệ)
+
+- Chức năng: Chọn tất cả các phần tử tag02 nằm bên trong phần tử tag01, không phụ thuộc vào mức độ con.
+ + Cú pháp:
+- CSS:
+tag01 tag02 {
+    /* viết CSS trong này */
+}
+ + Ví dụ: Chọn tất cả các <span> bên trong <div>:
+- HTML:
+<div>
+    <p>
+        <span>Text 1</span>
+        <span>Text 2</span>
+    </p>
+</div>
+- CSS:
+div span {
+    color: purple;
+}
+- Trong ví dụ này, tất cả các phần tử <span> bên trong <div> đều có màu tím.
