@@ -1,0 +1,26 @@
+Khái Niệm Responsive
+- Responsive là một phương pháp thiết kế website giúp trang web hiển thị tốt và phù hợp trên mọi loại thiết bị, bao gồm máy tính để bàn, máy tính bảng, và điện thoại di động. Mục tiêu là đảm bảo trang web có giao diện và trải nghiệm người dùng tối ưu trên các kích thước màn hình khác nhau mà không cần phải thiết kế riêng biệt cho từng loại thiết bị.
+- Các thành phần chính của thiết kế Responsive:
+
+* Media Queries
+- Media Queries trong CSS cho phép bạn áp dụng các quy tắc CSS khác nhau dựa trên kích thước và đặc điểm của thiết bị.
+ + Một ví dụ đơn giản về media query:
+- CSS: @media screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+- Ở ví dụ trên, khi chiều rộng của thiết bị nhỏ hơn hoặc bằng 768px, màu nền của trang web sẽ chuyển sang màu xanh nhạt.
+
+* Meta Viewport
+- Thẻ meta viewport trong HTML giúp trình duyệt hiểu rằng website cần điều chỉnh kích thước tương ứng với kích thước thiết bị người dùng.
+- HTML:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ + viewport: Xác định khu vực nhìn thấy của người dùng, được thiết lập bằng cách sử dụng thẻ meta.
+ + width=device-width: Đặt chiều rộng của trang web bằng với chiều rộng của thiết bị.
+ + initial-scale=1.0: Đặt mức độ thu phóng ban đầu của website khi tải lần đầu, thường được đặt là 1 (nghĩa là không phóng to hay thu nhỏ).
+
+* Sử dụng các đơn vị tương đối
+- Để thiết kế Responsive, thường sử dụng các đơn vị đo tương đối như em, rem, vw (viewport width), và vh (viewport height) thay vì các đơn vị cố định như px. Điều này giúp các thành phần của trang web co giãn theo kích thước của màn hình.
+* Grid và Flexbox
+- CSS Grid và Flexbox là các công cụ mạnh mẽ trong CSS giúp dễ dàng tạo bố cục trang web responsive.
