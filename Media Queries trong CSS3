@@ -1,0 +1,50 @@
+Media Queries trong CSS3
+
+- Media Queries là một tính năng của CSS3 cho phép áp dụng các quy tắc CSS khác nhau dựa trên các thuộc tính của thiết bị, như kích thước màn hình, độ phân giải, hoặc loại thiết bị (máy tính, điện thoại, máy in, v.v.). Nhờ đó, trang web có thể điều chỉnh hiển thị phù hợp trên nhiều thiết bị khác nhau, từ màn hình máy tính lớn đến điện thoại di động nhỏ.
+ + Cú pháp cơ bản:
+- CSS:
+@media mediaType and (mediaFeature) {
+  /* CSS code */
+}
+- mediaType: Xác định loại thiết bị mà media query sẽ áp dụng. Các loại thường dùng:
+ + all: Dùng cho mọi thiết bị.
+ + print: Dùng cho máy in.
+ + screen: Dùng cho màn hình như máy tính và các thiết bị di động.
+- mediaFeature: Các đặc điểm của thiết bị được kiểm tra. Một số thuộc tính phổ biến:
+ + max-width: Áp dụng khi chiều rộng của viewport nhỏ hơn hoặc bằng giá trị đã chỉ định.
+ + min-width: Áp dụng khi chiều rộng của viewport lớn hơn hoặc bằng giá trị đã chỉ định.
+
++ Ví dụ:
+ * PC First (Thiết kế từ màn hình lớn đến nhỏ):
+  + Đây là cách tiếp cận thiết kế giao diện web bắt đầu từ màn hình lớn (máy tính) và sau đó điều chỉnh lại cho màn hình nhỏ hơn. Khi sử dụng phương pháp này, max-width thường được sử dụng để giới hạn kích thước tối đa của màn hình mà các quy tắc CSS áp dụng.
+- CSS:
+/* Dành cho màn hình lớn hơn 768px (PC) */
+body {
+  background-color: lightblue;
+}
+
+/* Dành cho màn hình nhỏ hơn hoặc bằng 768px */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: pink;
+  }
+}
+
+ * Mobile First (Thiết kế từ màn hình nhỏ đến lớn):
+  + Đây là cách tiếp cận thiết kế giao diện web bắt đầu từ các thiết bị di động và sau đó mở rộng lên các màn hình lớn hơn (máy tính bảng, máy tính). min-width thường được sử dụng trong phương pháp này để đảm bảo thiết kế mở rộng mượt mà từ nhỏ đến lớn.
+- CSS:
+/* Dành cho màn hình nhỏ (Mobile) */
+body {
+  background-color: lightgreen;
+}
+
+/* Dành cho màn hình lớn hơn hoặc bằng 768px */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+- Lợi ích của Media Queries:
+ + Tương thích đa thiết bị: Media queries giúp trang web hiển thị tối ưu trên nhiều loại thiết bị khác nhau, từ điện thoại đến máy tính.
+ + Tăng trải nghiệm người dùng: Giao diện được tối ưu hoá giúp người dùng dễ dàng tương tác trên mọi kích thước màn hình.
