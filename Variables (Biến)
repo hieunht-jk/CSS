@@ -1,0 +1,55 @@
+ Variables (Biến)
+- Mục đích của việc khai báo biến trong CSS là để có thể sử dụng lại giá trị của biến ở nhiều nơi khác nhau trong tệp CSS, giúp quản lý và cập nhật mã dễ dàng hơn. CSS cung cấp biến toàn cục (global) và biến cục bộ (local).
+
+* Biến Toàn Cục (Global Variables)
+- Biến toàn cục có thể được truy cập và sử dụng ở bất kỳ đâu trong tệp CSS.
+- Cách khai báo: Biến toàn cục được khai báo trong selector :root, là pseudo-class đại diện cho phần tử gốc (phần tử <html>).
+- CSS:
+:root {
+  --main-color: #3498db;
+  --padding-size: 10px;
+}
+- Cách sử dụng: Sử dụng hàm var() để gọi giá trị của biến đã khai báo.
+- CSS:
+body {
+  background-color: var(--main-color);
+  padding: var(--padding-size);
+}
+
+* Biến Cục Bộ (Local Variables)
+- Biến cục bộ chỉ có thể được truy cập và sử dụng trong phạm vi của selector mà nó được khai báo.
+- Cách khai báo: Biến cục bộ được khai báo trong selector cụ thể, chỉ sử dụng trong phạm vi của selector đó.
+- CSS:
+.box {
+  --box-padding: 20px;
+  padding: var(--box-padding);
+}
+- Trong ví dụ trên, biến --box-padding chỉ được sử dụng trong phạm vi của selector .box.
+
+* Ví dụ về sử dụng kết hợp biến toàn cục và cục bộ:
+:root {
+  --main-font-size: 16px;
+  --main-color: #2ecc71;
+}
+
+h1 {
+  --heading-font-size: 2rem;
+  font-size: var(--heading-font-size);
+  color: var(--main-color);
+}
+
+p {
+  font-size: var(--main-font-size);
+}
+- Trong ví dụ này:
+ + Biến toàn cục --main-font-size và --main-color được sử dụng trong các selector khác nhau.
+ + Biến cục bộ --heading-font-size chỉ được sử dụng trong phạm vi của h1.
+* Lợi ích của việc sử dụng biến:
+- Dễ dàng bảo trì: Khi muốn thay đổi giá trị, chỉ cần sửa một nơi thay vì chỉnh sửa nhiều dòng CSS.
+- Tính nhất quán: Đảm bảo các giá trị sử dụng cùng biến sẽ nhất quán trên toàn bộ trang.
+
+
+
+
+
+
