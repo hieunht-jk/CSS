@@ -1,0 +1,93 @@
+* justify-content
+- Chức năng: Điều chỉnh vị trí bắt đầu và căn chỉnh các phần tử theo trục chính (main-axis) trong flex container.
+ + Cú pháp:
+- CSS:
+selector {
+  justify-content: gia-tri;
+}
+- Giá trị:
+ + flex-start: Mặc định, các phần tử được căn chỉnh từ đầu của trục chính.
+ + flex-end: Các phần tử bắt đầu từ cuối của trục chính.
+ + center: Các phần tử được căn giữa trên trục chính.
+ + space-between: Khoảng cách giữa các phần tử là bằng nhau, phần tử đầu và cuối sát lề container.
+ + space-around: Khoảng cách giữa các phần tử là bằng nhau, và khoảng cách giữa phần tử và lề container bằng một nửa khoảng cách giữa các phần tử.
+ + space-evenly: Khoảng cách giữa các phần tử và giữa phần tử với lề container là bằng nhau.
+
++ Ví dụ:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-between; /* Thử các giá trị khác nhau như flex-start, center, etc. */
+            background-color: lightgrey;
+            padding: 10px;
+        }
+        .flex-item {
+            background-color: coral;
+            padding: 20px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
+
+
+* order
+- Chức năng: Sắp xếp lại vị trí của các phần tử trong flex container.
+ + Cú pháp:
+- CSS:
+selector {
+  order: gia-tri;
+}
+- Giá trị:
+ + gia-tri: Xác định thứ tự của phần tử trong flex container. Mặc định là 0. Giá trị lớn hơn 0 sẽ đưa phần tử xuống dưới, giá trị nhỏ hơn 0 sẽ đưa phần tử lên trên. Giá trị âm có thể được sử dụng.
++ Ví dụ:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+        }
+        .flex-item {
+            background-color: coral;
+            padding: 20px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+        }
+        .item1 {
+            order: 3;
+        }
+        .item2 {
+            order: 1;
+        }
+        .item3 {
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item1">Item 1</div>
+        <div class="flex-item item2">Item 2</div>
+        <div class="flex-item item3">Item 3</div>
+    </div>
+</body>
+</html>
+- Trong ví dụ trên, Item 2 sẽ xuất hiện trước Item 3, và Item 1 sẽ xuất hiện cuối cùng.
