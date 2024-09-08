@@ -1,0 +1,77 @@
+Position (Vị trí)
+
+- Thuộc tính position được sử dụng để xác định vị trí của phần tử trên trang.
+- Có 5 giá trị khác nhau:
+ + static: Vị trí mặc định của phần tử, không bị ảnh hưởng bởi các thuộc tính top, right, bottom, left.
+ + relative: Vị trí tương đối với vị trí mặc định của phần tử. Có thể áp dụng các thuộc tính top, right, bottom, left để di chuyển phần tử so với vị trí ban đầu của nó.
+ + absolute: Vị trí tuyệt đối dựa trên thành phần bao bọc gần nhất có thuộc tính position: relative; hoặc position: absolute;. Nếu không có, nó sẽ căn cứ vào viewport (cửa sổ trình duyệt).
+ + fixed: Vị trí cố định so với cửa sổ trình duyệt (viewport). Phần tử luôn giữ nguyên vị trí khi cuộn trang, và sử dụng các thuộc tính top, right, bottom, left để định vị.
+ + sticky: Kết hợp giữa relative và fixed. Phần tử sẽ hiển thị như relative khi ở vị trí bình thường, nhưng khi cuộn đến một điểm nhất định, nó sẽ trở nên cố định (giống fixed). Khi cuộn qua, nó sẽ quay lại chế độ relative.
+
+- Ví dụ
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Position</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Tạo không gian cuộn để xem hiệu ứng sticky */
+        }
+
+        .static {
+            position: static;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: lightyellow;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: lightgray;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="absolute">Absolute Position</div>
+    <div class="fixed">Fixed Position</div>
+    <div class="sticky">Sticky Position</div>
+
+</body>
+</html>
+- Phần này giúp xác định cách phần tử di chuyển và hiển thị trên trang dựa trên các thuộc tính định vị.
