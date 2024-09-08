@@ -1,0 +1,46 @@
+* align-items
+- Chức năng: Điều chỉnh vị trí và căn chỉnh các phần tử theo trục cross-axis (trục ngang nếu trục chính là dọc).
+- Sử dụng: Để căn chỉnh các phần tử trong một dòng.
+ + Cú pháp:
+- CSS:
+selector {
+  align-items: giá-trị;
+}
+- Giá trị:
+ + stretch (mặc định): Các phần tử sẽ tự động kéo dài để lấp đầy không gian theo trục cross-axis.
+ + flex-start: Các phần tử được căn chỉnh từ lề bắt đầu của trục cross-axis.
+ + flex-end: Các phần tử được căn chỉnh từ lề kết thúc của trục cross-axis.
+ + center: Các phần tử được căn chỉnh ở giữa theo chiều của trục cross-axis.
+
+* align-content
+- Chức năng: Điều chỉnh vị trí và căn chỉnh các phần tử theo trục cross-axis khi có nhiều dòng (tức là khi các phần tử được gói lại trong nhiều hàng).
+- Sử dụng: Để căn chỉnh các dòng của phần tử trong một container.
+ + Cú pháp:
+- CSS:
+selector {
+  align-content: giá-trị;
+}
+- Giá trị:
+
+ + stretch (mặc định): Các dòng sẽ tự động kéo dài để lấp đầy không gian theo trục cross-axis.
+ + flex-start: Các dòng bắt đầu từ lề bắt đầu của trục cross-axis.
+ + flex-end: Các dòng bắt đầu từ lề kết thúc của trục cross-axis.
+ + center: Các dòng được căn chỉnh ở giữa theo trục cross-axis.
+ + space-between: Khoảng cách giữa các dòng bằng nhau; dòng đầu và dòng cuối sát với lề của container.
+ + space-around: Khoảng cách giữa các dòng bằng nhau; khoảng cách giữa dòng và lề bằng một nửa khoảng cách giữa các dòng.
+ + space-evenly: Khoảng cách giữa các dòng và giữa dòng và lề đều nhau.
+
+* align-self
+- Chức năng: Điều chỉnh vị trí và căn chỉnh của một phần tử cụ thể theo trục cross-axis, khác với align-items vốn áp dụng cho tất cả các phần tử trong container.
+- Sử dụng: Áp dụng cho một phần tử duy nhất trong container flex.
+ + Cú pháp:
+- CSS:
+selector {
+  align-self: giá-trị;
+}
+- Giá trị:
+ + auto (mặc định): Sử dụng giá trị của thuộc tính align-items của container làm giá trị mặc định.
+ + stretch: Phần tử sẽ tự động mở rộng để lấp đầy không gian theo chiều cao của container (ưu tiên chiều cao nếu có).
+ + flex-start: Phần tử sẽ bắt đầu từ lề bắt đầu của trục cross-axis.
+ + flex-end: Phần tử sẽ bắt đầu từ lề kết thúc của trục cross-axis.
+ + center: Phần tử được căn chỉnh ở giữa theo trục cross-axis.
