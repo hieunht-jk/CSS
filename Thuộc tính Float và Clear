@@ -1,0 +1,80 @@
+* Thuộc tính float và clear là những khái niệm quan trọng trong việc điều chỉnh cách sắp xếp các phần tử trên trang web, đặc biệt khi tạo bố cục. 
+
+1 Float
+- Thuộc tính float cho phép một phần tử "nổi" sang trái hoặc phải, làm cho văn bản hoặc các phần tử khác bao quanh nó. Đây là cách sử dụng thuộc tính float:
+ + float: left; – Phần tử sẽ nổi sang trái, các phần tử khác sẽ bao quanh bên phải của nó.
+ + float: right; – Phần tử sẽ nổi sang phải, các phần tử khác sẽ bao quanh bên trái của nó.
+ + float: none; – Mặc định, không áp dụng float, phần tử sẽ hiển thị theo dòng thông thường.
+  + Ví dụ:
+- HTML:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .float-left {
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        
+        .float-right {
+            float: right;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+        
+        .content {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+    <div class="content">This is the content that flows around the floated elements.</div>
+</body>
+</html>
+
+2 Clear
+- Thuộc tính clear được sử dụng để ngăn một phần tử kế tiếp "đè" lên phần tử có sử dụng float. Khi sử dụng clear, phần tử sẽ được đẩy xuống dưới các phần tử đã được áp dụng float.
+ + clear: left; – Ngăn phần tử nằm bên dưới bất kỳ phần tử nào được float sang trái.
+ + clear: right; – Ngăn phần tử nằm bên dưới bất kỳ phần tử nào được float sang phải.
+ + clear: both; – Ngăn phần tử nằm bên dưới cả phần tử float sang trái và phải.
+ + clear: none; – Phục hồi trạng thái mặc định, không áp dụng clear.
+  + Ví dụ:
+- HTML:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .float-left {
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        
+        .content {
+            background-color: lightgray;
+            height: 100px;
+        }
+        
+        .clear-both {
+            clear: both;
+            background-color: lightcoral;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="float-left">Float Left</div>
+    <div class="content">This is the content that flows around the floated element.</div>
+    <div class="clear-both">This is the cleared content.</div>
+</body>
+</html>
+- Trong ví dụ trên: Phần tử clear-both ngăn việc đè lên phần tử đã được float trước đó, và đẩy nó xuống dưới tất cả các phần tử float.
+* Tóm tắt:
+- Float: Sử dụng để làm phần tử nổi sang trái hoặc phải và cho phép các phần tử khác bao quanh nó.
+- Clear: Ngăn chặn các phần tử kế tiếp bao quanh phần tử có float, buộc chúng xuống dưới.
