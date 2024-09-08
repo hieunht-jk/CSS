@@ -1,0 +1,63 @@
+Overflow (Tràn ra)
+
+- Thuộc tính overflow: Xác định cách xử lý khi nội dung của phần tử tràn ra ngoài kích thước của phần tử đó.
+- Các giá trị của overflow:
+ + overflow: visible;: Nội dung tràn ra ngoài hộp vẫn được hiển thị và không bị cắt bớt (mặc định).
+ + overflow: hidden;: Nội dung tràn ra ngoài hộp sẽ bị ẩn, không hiển thị và không có thanh cuộn.
+ + overflow: scroll;: Nội dung tràn sẽ bị ẩn, và thanh cuộn ngang và dọc sẽ xuất hiện để xem phần nội dung bị tràn.
+ + overflow: auto;: Thanh cuộn sẽ tự động hiển thị nếu nội dung tràn ra ngoài hộp; nếu không tràn, không có thanh cuộn xuất hiện.
+
+- Ví dụ:
+ + Dưới đây là ví dụ về cách sử dụng thuộc tính overflow:
+
+- HTML
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Overflow</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            overflow: hidden; /* Thay đổi giá trị này để xem các hiệu ứng khác */
+        }
+
+        .content {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">Nội dung tràn ra ngoài hộp. Đây là nội dung rất dài để thử nghiệm thuộc tính overflow.</div>
+    </div>
+
+    <div class="container scroll">
+        <div class="content">Nội dung tràn ra ngoài hộp với thanh cuộn.</div>
+    </div>
+
+    <div class="container auto">
+        <div class="content">Nội dung tràn ra ngoài hộp với thanh cuộn tự động xuất hiện nếu cần.</div>
+    </div>
+
+</body>
+</html>
+- Giải thích:
+ + .container với overflow: hidden;: Nội dung bên trong sẽ bị cắt bớt nếu nó tràn ra ngoài kích thước của phần tử bao bọc. Thanh cuộn không xuất hiện.
+ + .container với overflow: scroll;: Thanh cuộn luôn hiển thị, bất kể nội dung có tràn hay không.
+ + .container với overflow: auto;: Thanh cuộn chỉ xuất hiện khi nội dung thực sự tràn ra ngoài hộp.
