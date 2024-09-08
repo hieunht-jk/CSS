@@ -1,0 +1,21 @@
+CSS Function attr()
+- Chức năng: Hàm attr() trong CSS được sử dụng để lấy và sử dụng giá trị của một thuộc tính HTML của phần tử đó làm giá trị cho các thuộc tính CSS. 
+ + Cú pháp:
+- CSS:
+attr(attribute-name);
+- Trong đó, attribute-name là tên của thuộc tính HTML mà bạn muốn lấy giá trị.
+* Lưu ý:
+ + Hiện tại, hàm attr() trong CSS chỉ có thể được sử dụng hiệu quả với thuộc tính content trong pseudo-element (::before, ::after). Nó không thể áp dụng cho các thuộc tính CSS khác như width, height, color, v.v.
+
++ Ví dụ:
+ - Sử dụng hàm attr() để hiển thị giá trị của một thuộc tính HTML (ví dụ data-label) thông qua pseudo-element ::before hoặc ::after.
+- HTML:
+<div data-label="Example Label">This is a div</div>
+- CSS:
+div::before {
+  content: attr(data-label);
+  font-weight: bold;
+}
+- Kết quả: Trước phần tử <div>, dòng chữ "Example Label" sẽ được hiển thị vì nó lấy giá trị từ thuộc tính data-label của thẻ div.
+- Ứng dụng trong thực tế:
+ + Hàm attr() thường được sử dụng để chèn thông tin bổ sung như giá trị của các thuộc tính data-* trực tiếp vào nội dung, đặc biệt hữu ích trong việc tạo tooltips, hiển thị các giá trị tùy chỉnh, hoặc trong các ứng dụng mà các thuộc tính HTML cần ảnh hưởng đến giao diện người dùng.
