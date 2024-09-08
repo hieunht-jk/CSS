@@ -1,0 +1,58 @@
+* Specificity (Tính đặc hiệu)
+
+- Specificity là cách mà trình duyệt xác định độ ưu tiên của các quy tắc CSS khi có nhiều quy tắc áp dụng cho cùng một phần tử. Độ đặc hiệu cao hơn sẽ được ưu tiên, và quy tắc CSS tương ứng sẽ được áp dụng.
+- Cách tính Specificity:
+- Specificity được thể hiện bằng một con số gồm bốn phần, tương ứng với bốn mức độ ưu tiên:
+
+ + ID selectors: (a) – Mức độ cao nhất. Mỗi ID được chọn làm tăng giá trị của phần a trong tính toán specificity.
+ + Class selectors, attribute selectors, pseudo-classes: (b) – Mức độ trung bình. Các bộ chọn như class (.class-name), attribute ([type="text"]), hoặc pseudo-class (:hover, :focus) làm tăng giá trị của phần b.
+ + Type selectors, pseudo-elements: (c) – Mức độ thấp. Các bộ chọn thẻ HTML (div, p, h1), hoặc pseudo-elements (::before, ::after) làm tăng giá trị của phần c.
+ + Universal selectors, combinators, negation pseudo-class: (d = 0) – Mức độ thấp nhất. Bộ chọn toàn cục (*), kết hợp giữa các bộ chọn (>, +, ~), hoặc bộ chọn phủ định (:not()) không làm tăng giá trị specificity.
+  + Ví dụ về tính toán specificity:
+   + #header: Specificity = (1, 0, 0)
+   + .menu-item: Specificity = (0, 1, 0)
+   + div p: Specificity = (0, 0, 2)
+   + *: Specificity = (0, 0, 0)
+- Quy tắc với specificity cao hơn sẽ được áp dụng. Nếu specificity bằng nhau, quy tắc được định nghĩa sau cùng trong mã CSS sẽ được áp dụng.
+ + Ví dụ:
+- CSS:
+/* Specificity = (0, 0, 1) */
+p {
+  color: blue;
+}
+
+/* Specificity = (0, 1, 0) */
+.class-name {
+  color: red;
+}
+
+/* Specificity = (1, 0, 0) */
+#id-name {
+  color: green;
+}
+- Trong ví dụ trên, nếu một thẻ p có cả class="class-name" và id="id-name", màu xanh lá cây (color: green) sẽ được áp dụng do #id-name có specificity cao nhất.
+
+* !important (Quan trọng)
+
+- !important là một từ khóa được sử dụng để thay đổi thứ tự ưu tiên trong việc áp dụng CSS. Khi thuộc tính CSS nào đó được gán !important, nó sẽ có mức ưu tiên cao nhất và sẽ được áp dụng ngay cả khi có các quy tắc CSS khác với specificity cao hơn.
+- Quy tắc khi sử dụng !important:
+ + Nếu một thuộc tính có !important, nó sẽ được ưu tiên hơn tất cả các quy tắc CSS khác, trừ khi có một quy tắc khác cũng sử dụng !important với độ specificity cao hơn. 
+ + Trình duyệt sẽ bỏ qua thứ tự của các quy tắc CSS thông thường và áp dụng thuộc tính có !important.
+  + Ví dụ:
+- CSS
+p {
+  color: blue !important;
+}
+
+.class-name {
+  color: red;
+}
+
+#id-name {
+  color: green;
+}
+- Trong ví dụ này, tất cả các thẻ <p> sẽ có màu xanh dương bất kể các quy tắc khác (dù có sử dụng class hoặc ID), vì color: blue được gán !important.
+
+- Tóm tắt:
+ + Specificity: Được sử dụng để xác định thứ tự ưu tiên của các quy tắc CSS. Bộ chọn ID có mức ưu tiên cao nhất, tiếp theo là class, attribute selectors, pseudo-classes, và cuối cùng là các bộ chọn thẻ HTML.
+ + !important: Là từ khóa giúp bỏ qua thứ tự ưu tiên thông thường của CSS, và thuộc tính CSS có !important sẽ luôn được áp dụng trước.
