@@ -1,0 +1,34 @@
+ Table (bảng)
+
++ <table>: Tạo bảng.
++ <thead>: Phần đầu bảng (chứa tiêu đề của các cột).
++ <tr>: Dòng trong bảng (mỗi hàng là một <tr>).
++ <th>: Tiêu đề cột (thường là chữ đậm).
++ <tbody>: Nội dung bảng (chứa dữ liệu).
++ <td>: Ô dữ liệu trong bảng.
+
+- Ví dụ
+
+<table>
+  <thead>
+    <tr>
+      <th>Cột 1</th>
+      <th>Cột 2</th>
+      <th>Cột 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dữ liệu 1</td>
+      <td>Dữ liệu 2</td>
+      <td>Dữ liệu 3</td>
+    </tr>
+    <tr>
+      <td>Dữ liệu 4</td>
+      <td>Dữ liệu 5</td>
+      <td>Dữ liệu 6</td>
+    </tr>
+  </tbody>
+</table>
+
+- Bạn có thể thêm nhiều dòng và cột khác nhau bằng cách sao chép và điều chỉnh các thẻ <tr> và <td>.
