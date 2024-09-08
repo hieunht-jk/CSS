@@ -1,0 +1,41 @@
+* Đơn vị trong CSS được chia thành hai loại chính: đơn vị tuyệt đối và đơn vị tương đối. Mỗi loại có cách hoạt động khác nhau và được sử dụng tùy theo mục đích cụ thể khi định kích thước cho các phần tử trên trang web.
+
+1. Đơn vị tuyệt đối
+- Đơn vị tuyệt đối có giá trị cố định, không thay đổi theo kích thước của phần tử cha hoặc cửa sổ trình duyệt. Chúng đảm bảo rằng kích thước hiển thị không bị ảnh hưởng bởi các yếu tố bên ngoài.
+- Các đơn vị phổ biến:
+ + cm (centimeter): Đơn vị đo theo centimet.
+ + mm (millimeter): Đơn vị đo theo milimet.
+ + in (inch): 1 in = 2.54 cm, tương đương với 1/96 inch là 1 pixel trên màn hình.
+ + px (pixel): Đơn vị tính bằng pixel. 1 px = 1/96 in. Đơn vị cơ bản nhất trên màn hình.
+ + pt (point): 1 pt = 1/72 in. Thường được sử dụng trong in ấn.
+ + pc (pica): 1 pc = 12 pt. Đơn vị pica ít phổ biến hơn nhưng được sử dụng trong in ấn và thiết kế đồ họa.
+ + Ví dụ:
+- CSS:
+div {
+  width: 10cm;
+  height: 50px;
+  font-size: 12pt;
+}
+
+2. Đơn vị tương đối
+- Đơn vị tương đối thay đổi theo bối cảnh hoặc kích thước của các phần tử khác, chẳng hạn như phần tử cha, viewport (cửa sổ trình duyệt), hoặc kích thước phông chữ.
+- Các đơn vị phổ biến:
+ + %: Giá trị tương đối so với kích thước của phần tử cha. Ví dụ, width: 50% có nghĩa là phần tử có chiều rộng bằng 50% của phần tử cha.
+ + rem: Giá trị tương đối so với font-size của phần tử gốc (thường là phần tử <html>). Ví dụ, nếu font-size của phần tử gốc là 16px, thì 1rem = 16px.
+ + em: Giá trị tương đối so với font-size của phần tử cha. Ví dụ, nếu phần tử cha có font-size là 16px, thì 1em = 16px. Các đơn vị em cũng có thể bị thay đổi theo tầng nếu nhiều phần tử lồng nhau.
+ + vw (viewport width): 1vw bằng 1% chiều rộng của cửa sổ trình duyệt. Ví dụ, nếu cửa sổ rộng 1000px, thì 1vw = 10px.
+ + vh (viewport height): 1vh bằng 1% chiều cao của cửa sổ trình duyệt. Ví dụ, nếu chiều cao của cửa sổ là 800px, thì 1vh = 8px.
+ + ex: 1ex tương đương với chiều cao của ký tự "x" trong phông chữ hiện tại. Thường được dùng để định kích thước các thành phần liên quan đến văn bản.
+ + ch: 1ch tương đương với chiều rộng của ký tự số "0" trong phông chữ hiện tại. Thường được dùng để xác định chiều rộng của các thành phần văn bản.
+ + Ví dụ:
+- CSS:
+div {
+  width: 50%;
+  font-size: 1.5rem;
+  height: 50vh;
+  padding: 2em;
+}
+
+* Tóm tắt:
+- Đơn vị tuyệt đối: Có giá trị cố định và không bị thay đổi bởi các yếu tố bên ngoài. Thích hợp cho thiết kế in ấn hoặc khi cần một kích thước chính xác tuyệt đối.
+- Đơn vị tương đối: Phụ thuộc vào các yếu tố khác như kích thước của phần tử cha, viewport, hoặc font-size. Thích hợp cho thiết kế linh hoạt và tương thích với nhiều loại thiết bị khác nhau.
