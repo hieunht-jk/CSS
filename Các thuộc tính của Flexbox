@@ -1,0 +1,37 @@
+Các thuộc tính của Flexbox
+
+* display: flex
+- Chức năng: Thiết lập flex container để dễ dàng sắp xếp các phần tử bên trong.
+ + Cú pháp:
+- CSS:
+selector {
+  display: gia-tri;
+}
+- Giá trị:
+ + flex: Đặt phần tử thành flex container, làm cho các phần tử con bên trong linh hoạt hơn với chiều rộng 100%.
+ + inline-flex: Tạo flex container, nhưng container có chiều rộng bằng chiều rộng của nội dung bên trong, giống như phần tử inline.
+
+* flex-direction
+- Chức năng: Xác định hướng của trục chính (main-axis) để sắp xếp các phần tử con trong container.
+ + Cú pháp:
+- CSS:
+selector {
+  flex-direction: gia-tri;
+}
+- Giá trị:
+ + row: Sắp xếp các phần tử theo hàng ngang (mặc định).
+ + row-reverse: Sắp xếp các phần tử theo hàng ngang, nhưng theo thứ tự ngược lại.
+ + column: Sắp xếp các phần tử theo cột dọc.
+ + column-reverse: Sắp xếp các phần tử theo cột dọc, nhưng theo thứ tự ngược lại.
+
+* flex-wrap
+- Chức năng: Quyết định xem các phần tử có tự động xuống dòng hay không khi kích thước container thay đổi.
++ Cú pháp:
+- CSS:
+selector {
+  flex-wrap: gia-tri;
+}
+- Giá trị:
+ + nowrap: Mặc định, tất cả các phần tử nằm trên một dòng.
+ + wrap: Nếu chiều rộng của phần tử lớn hơn chiều rộng của container, phần tử sẽ tự động xuống dòng.
+ + wrap-reverse: Tương tự wrap, nhưng các phần tử sẽ tự động nhảy lên dòng trên thay vì xuống dòng.
