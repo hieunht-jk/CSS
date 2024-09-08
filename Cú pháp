@@ -1,6 +1,7 @@
 Cú pháp CSS
 
-- Cú pháp cơ bản của CSS
+- Cú pháp cơ bản của CSS:
+- CSS:
 selector {
   property: value;
 }
@@ -35,6 +36,7 @@ Chọn các phần tử dựa trên các thuộc tính của chúng.
 - Bộ chọn phần tử (element selector):
 Chọn các phần tử HTML dựa trên tên thẻ.
  + Ví dụ:
+- CSS:
 p {
   color: blue;
 }
@@ -43,6 +45,7 @@ p {
 Chọn một phần tử HTML cụ thể dựa trên thuộc tính id.
 Lưu ý: Tên id không được bắt đầu bằng số.
  + Ví dụ:
+- CSS:
 #title {
   font-size: 24px;
 }
@@ -51,12 +54,14 @@ Lưu ý: Tên id không được bắt đầu bằng số.
 Chọn các phần tử HTML dựa trên thuộc tính class.
 + Lưu ý: Tên class không được bắt đầu bằng số.
  + Ví dụ:
+- CSS:
 .title {
   color: green;
 }
 - Bộ chọn chung (universal selector):
 Chọn tất cả các phần tử HTML trên trang.
  + Ví dụ:
+- CSS:
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +70,7 @@ Chọn tất cả các phần tử HTML trên trang.
 - Bộ chọn nhóm (grouping selector):
 Chọn nhiều phần tử, id, hoặc class cùng một lúc và áp dụng chung một kiểu.
  + Ví dụ:
+- CSS:
 h1, h2, p {
   color: red;
 }
