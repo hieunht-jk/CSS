@@ -1,0 +1,32 @@
+Phần đầu (Header)
+- Phần này thường chứa logo, thanh điều hướng (navigation), tiêu đề, hoặc các thông tin liên quan đến phần giới thiệu của trang.
+- CSS:
+header {
+  background-color: #333; /* Màu nền */
+  color: white; /* Màu chữ */
+  text-align: center; /* Căn giữa nội dung */
+  padding: 20px;
+}
+
+Phần giữa (Main/Body)
+- Phần này chứa nội dung chính của trang, bao gồm văn bản, hình ảnh, hoặc các phần tử khác. Thông thường phần này chiếm phần lớn diện tích của trang web.
+- CSS:
+main {
+  background-color: #f4f4f4; /* Màu nền sáng */
+  color: #000; /* Màu chữ đen */
+  padding: 20px;
+  min-height: 400px; /* Đảm bảo chiều cao tối thiểu */
+}
+
+Phần cuối (Footer)
+- Phần cuối thường chứa các thông tin liên hệ, bản quyền, hoặc các liên kết tới các trang khác.
+- CSS:
+footer {
+  background-color: #333; /* Màu nền đậm */
+  color: white; /* Màu chữ trắng */
+  text-align: center; /* Căn giữa nội dung */
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
